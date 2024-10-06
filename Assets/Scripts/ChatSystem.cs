@@ -13,7 +13,7 @@ public class ChatSystem : MonoBehaviour
     {
         // Clear the input field on start
         chatInput.text = ""; 
-        chatDisplay.text = "Chat Messages:\n";
+        chatDisplay.text = "Space Station: \n";
         chatInput.gameObject.SetActive(false); // Hide the input field initially
     }
 
@@ -23,7 +23,7 @@ public class ChatSystem : MonoBehaviour
         float distance = Vector3.Distance(player.position, chatTerminal.position);
 
         // If the player is within the activation distance
-        if (distance <= activationDistance)
+        if (distance <= 3)
         {
             // Check if the T key is pressed
             if (Input.GetKeyDown(KeyCode.T))
