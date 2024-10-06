@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI; // Include this for using UI elements
+using System.Collections;
 
 public class PlayerFoodInteraction : MonoBehaviour
 {
