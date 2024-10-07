@@ -45,4 +45,4 @@ This game was inspired by the real conditions of the **James Webb Space Telescop
 Throughout the journey, players assess the motion of rogue space debris and adjust their trajectory to avoid damage. Failure to do so may result in mission failure.
 
 ---
-[View the DEMO][NAC FINAL.pdf]
+VIEW NAC FINAL
