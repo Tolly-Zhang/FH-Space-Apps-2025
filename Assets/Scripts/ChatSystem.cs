@@ -11,6 +11,12 @@ public class ChatSystem : MonoBehaviour
 
     private void Start()
     {
+        // Check and log the assignments of the references
+        Debug.Log($"Chat Input Field Assigned: {chatInput != null}");
+        Debug.Log($"Chat Display Text Assigned: {chatDisplay != null}");
+        Debug.Log($"Player Transform Assigned: {player != null}");
+        Debug.Log($"Chat Terminal Transform Assigned: {chatTerminal != null}");
+
         // Clear the input field on start
         chatInput.text = ""; 
         chatDisplay.text = "Space Station: \n";
@@ -23,7 +29,7 @@ public class ChatSystem : MonoBehaviour
         float distance = Vector3.Distance(player.position, chatTerminal.position);
 
         // If the player is within the activation distance
-        if (distance <= 3)
+        if (distance <= activationDistance)
         {
             // Check if the T key is pressed
             if (Input.GetKeyDown(KeyCode.T))
