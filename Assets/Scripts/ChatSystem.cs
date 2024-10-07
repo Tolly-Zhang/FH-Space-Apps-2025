@@ -11,9 +11,15 @@ public class ChatSystem : MonoBehaviour
 
     private void Start()
     {
+        // Check and log the assignments of the references
+        Debug.Log($"Chat Input Field Assigned: {chatInput != null}");
+        Debug.Log($"Chat Display Text Assigned: {chatDisplay != null}");
+        Debug.Log($"Player Transform Assigned: {player != null}");
+        Debug.Log($"Chat Terminal Transform Assigned: {chatTerminal != null}");
+
         // Clear the input field on start
         chatInput.text = ""; 
-        chatDisplay.text = "Chat Messages:\n";
+        chatDisplay.text = "Space Station: \n";
         chatInput.gameObject.SetActive(false); // Hide the input field initially
     }
 

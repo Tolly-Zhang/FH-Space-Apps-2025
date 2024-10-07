@@ -4,18 +4,17 @@ using System.Collections;
 
 public class PlayerFoodInteraction : MonoBehaviour
 {
-    public KeyCode interactKey = KeyCode.F; // The key used for interaction
-    public int nearbyFoodStorage = 10;       // Initial food quantity in the storage
-    public int playerHealth = 10;            // Player health level
-    public int foodEaten = 0;                // Tracks total food the player has eaten
-    public float activationDistance = 3f;     // Distance within which the player can interact
-    public Transform foodStorage;              // Reference to the food storage transform
+    public KeyCode interactKey = KeyCode.F; 
+    public int nearbyFoodStorage = 10;       
+    public int playerHealth = 10;            
+    public int foodEaten = 0;                
+    public float activationDistance = 3f;     
+    public Transform foodStorage;              
 
-    public RawImage healthBar;                // Reference to the health bar UI RawImage
+    public RawImage healthBar;                
 
-    private bool isNearFoodStorage = false;   // To track if player is near food storage
-    private float healthDropInterval = 60f;   // Health drop interval in seconds
-    private float healthDropAmount = 10f;     // Health drop percentage
+    private float healthDropInterval = 60f;   
+    private float healthDropAmount = 10f;     
 
     private void Start()
     {
@@ -25,12 +24,14 @@ public class PlayerFoodInteraction : MonoBehaviour
 
     private void Update()
     {
-        // Check distance between the player and the food storage
+        // No need to check for distance in Update, use the new method instead
+        // This is handled in the PlayerController
+    }
+
+    public void CheckForFoodInteraction() // Ensure this method exists
+    {
         float distance = Vector3.Distance(transform.position, foodStorage.position);
 
-        Debug.Log("Updating health bar..." + playerHealth);
-
-        // If the player is within the activation distance
         if (distance <= activationDistance)
         {
             if (Input.GetKeyDown(interactKey))
@@ -47,53 +48,44 @@ public class PlayerFoodInteraction : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            isNearFoodStorage = false; // Player is too far from food storage
-        }
     }
 
     void EatFood()
     {
-        nearbyFoodStorage--;  // Decrease food quantity in storage
-        playerHealth = Mathf.Min(playerHealth + 20, 100);  // Increase health level (example)
-        foodEaten++;  // Increase total food eaten by player
+        nearbyFoodStorage--;  
+        playerHealth = Mathf.Min(playerHealth + 20, 100);  
+        foodEaten++;  
         Debug.Log("Picked up food and ate it! Health remaining: " + playerHealth);
-        UpdateHealthBar(); // Update the health bar UI
+        UpdateHealthBar(); 
     }
 
     void UpdateHealthBar()
     {
-        // Calculate the health percentage and update the health bar size
-        float healthPercentage = playerHealth / 100f; // Assuming health max is 100
-
-        // Adjust the RawImage size according to health
+        float healthPercentage = playerHealth / 100f; 
         RectTransform healthBarRect = healthBar.GetComponent<RectTransform>();
-        healthBarRect.sizeDelta = new Vector2(300 * healthPercentage, healthBarRect.sizeDelta.y); // Adjust width based on health
+        healthBarRect.sizeDelta = new Vector2(300 * healthPercentage, healthBarRect.sizeDelta.y); 
 
-        // Optionally, you can change color based on health
         if (healthPercentage > 0.5f)
-            healthBar.color = Color.green; // Healthy
+            healthBar.color = Color.green; 
         else if (healthPercentage > 0.25f)
-            healthBar.color = Color.yellow; // Caution
+            healthBar.color = Color.yellow; 
         else
-            healthBar.color = Color.red; // Critical
+            healthBar.color = Color.red; 
     }
 
     private IEnumerator HealthDropCoroutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(healthDropInterval); // Wait for the specified interval
+            yield return new WaitForSeconds(healthDropInterval); 
             DropHealth();
         }
     }
 
     private void DropHealth()
     {
-        // Decrease health by 10%
-        playerHealth = Mathf.Max(playerHealth - (int)(healthDropAmount), 0); // Ensure health does not drop below 0
-        UpdateHealthBar(); // Update the health bar UI
+        playerHealth = Mathf.Max(playerHealth - (int)(healthDropAmount), 0);
+        UpdateHealthBar(); 
         Debug.Log("Health dropped! Current health: " + playerHealth);
     }
 }
