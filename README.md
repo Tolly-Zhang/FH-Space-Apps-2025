@@ -1,42 +1,48 @@
-Galactic Microgravity Game
-Galactic Microgravity Game is an immersive space-station survival simulation. Players will be challenged to make real-time, critical decisions while navigating a space station environment affected by various disasters.
+# Weightless Odyssey
 
-Table of Contents
-About the Game
-Features
-Inspiration
-How to Play
-Challenges
-How to Win
-Contributors
-About the Game
-In this game, you take on the role of a space station survivor, tasked with overcoming various catastrophic events such as power outages, asteroid showers, and electromagnetic storms. The goal is to survive as long as possible while managing the station's resources and systems.
+**Team Members**  
+- Aaradhay Anand  
+- Eric Chen  
+- Emerson Yu  
+- Tolly Zhang  
+- Fraser Heights Secondary School  
 
-Features
-Survival Challenges: Encounter multiple real-time crises such as EMT storms, asteroid impacts, and power failures.
-Explore-ability: The space station has a vast layout to explore and maintain.
-Dynamic Gameplay: Every decision can have long-term consequences on the player's survival and the outcome of the story.
-Inspiration
-Our game was inspired by a mix of our team's favorite gaming elements. We combined our ideas to create a detailed simulation with a focus on smooth transitions and complexity, allowing for an engaging and immersive experience.
+## Project Overview  
+*Weightless Odyssey* is a real-time simulation game where players assess and resolve critical system failures in a spacecraft. Players must also predict the motion and risk of interstellar bodies and space debris during interstellar travel. This game combines critical thinking and risk assessment with survival mechanics.
 
-How to Play
-Survival: Navigate through the space station, solve problems, and make time-critical decisions.
-Resource Management: Monitor various station systems and counters to prevent failure.
-Adaptation: React quickly to events that can change the course of gameplay, such as asteroid impacts or system failures.
-Challenges
-Players will face numerous challenges throughout the game, such as:
+### Focus & Main Ideas  
+- **Health Effects in Microgravity**:  
+  - Muscle Atrophy  
+  - Osteoporosis  
+  - Fluid Shift  
+  - Cardiovascular Deconditioning  
+  - Immune System Suppression  
+  - Radiation Exposure  
 
-Asteroid Showers
-Power Outages
-EMT Storms
-Life Support Failures
-Letting any of these challenges cause system failure or life support depletion will result in losing the game.
+- **Asteroid Characteristics & Motion Prediction**  
+  Players assess and avoid asteroid impacts through prediction models.
 
-How to Win
-To win, players must survive for a set period, or manage the space station through all the disasters. There is also an optional mode where players can set their own endgame time limit.
+- **Critical Failure Assessment**  
+  Players react to and resolve issues such as:
+  - Oxygen module failure  
+  - Food contamination  
+  - Power overload  
+  - Thruster failure  
 
-Contributors
-Aaradhay
-Tolly
-Emerson
-Eric
+### Gameplay  
+1. Players begin orbiting Earth, performing tasks and managing their health.
+2. They embark on a long-distance space journey, encountering various interstellar threats.
+3. Players face critical failures and must make decisions through thorough assessment and knowledge.
+4. They manage their **Physical** and **Mental Health** metrics through regular maintenance.
+
+### How to Win  
+The objective is to survive the journey. The game features customizable survival duration settings, allowing players to set an end goal to win.
+
+## Inspiration  
+This game was inspired by the real conditions of the **James Webb Space Telescope**, which was struck by a meteoroid between May 22-24. The game proposes a theoretical solution to avoid such incidents in space travel.
+
+### Asteroids Prediction Model  
+Throughout the journey, players assess the motion of rogue space debris and adjust their trajectory to avoid damage. Failure to do so may result in mission failure.
+
+---
+
