@@ -1,11 +1,12 @@
 # Weightless Odyssey
 
+Refer to [Final Build](Final%20Build)
+
 **Team Members**  
 - Aaradhay Anand  
 - Eric Chen  
 - Emerson Yu  
 - Tolly Zhang  
-- Fraser Heights Secondary School  
 
 ## Project Overview  
 *Weightless Odyssey* is a real-time simulation game where players assess and resolve critical system failures in a spacecraft. Players must also predict the motion and risk of interstellar bodies and space debris during interstellar travel. This game combines critical thinking and risk assessment with survival mechanics.
@@ -43,6 +44,3 @@ This game was inspired by the real conditions of the **James Webb Space Telescop
 
 ### Asteroids Prediction Model  
 Throughout the journey, players assess the motion of rogue space debris and adjust their trajectory to avoid damage. Failure to do so may result in mission failure.
-
----
-VIEW NAC FINAL
